@@ -1,9 +1,10 @@
 # Python Game
 
-Simple game based on something like _ticktacktoe_
+Simple game based on something like _ticktacktoe_.
 
 Game starts after calling function **play** with **two** arguments -> _MODE_, _ROWS_.
-**ROWS** -> Generates plan _ROW x ROW_
+
+**ROWS** -> Generates plan _ROW x ROW_.
 
 **MODES**.
 * **1** : Two-player game
