@@ -100,8 +100,8 @@ def play(mode, rows):
 
 
 print("Which mode do you want to play?")
-mode = int(input("(1) Game 1 vs 1, (2) Game 1 vs AI  : "))
+m = int(input("(1) Game 1 vs 1, (2) Game 1 vs AI  : "))
 size = int(input("Size of the board   : "))
-play(mode, size)
+play(m, size)
 # mode = 1  -> game 1 vs 1
 # mode = 2  -> game 1 vs AI
