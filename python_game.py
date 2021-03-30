@@ -18,10 +18,18 @@ def empty_plan(n):
 # blocks around player or AI -> '#'
 def print_plan(plan, n):
     symbol = {0: ".", 1: "X", 2: "O", 3: "#"}
+    print("  ", end=" ")
     for i in range(n):
+        print(i + 1, end=" ")
+    print()
+    print()
+
+    for i in range(n):
+        print(i + 1, end="  ")
         for j in range(n):
             print(symbol[plan[i][j]], end=" ")
         print()
+    print()
     print()
     return
 
@@ -70,9 +78,11 @@ def play(mode, rows):
         else:
             if player == 1:
                 move = input("Player 1 move x y: ")
+                print()
             else:
                 move = strategy(plan, rows)
                 print("AI move x y:", move)
+                print()
         x, y = list(map(int, move.split(" ")))
         if check_turn(plan, rows, x, y):
             plan = make_turn(plan, rows, x, y, player)
@@ -89,6 +99,9 @@ def play(mode, rows):
     return
 
 
-play(2, 10)
+print("Which mode do you want to play?")
+mode = int(input("(1) Game 1 vs 1, (2) Game 1 vs AI  : "))
+size = int(input("Size of the board   : "))
+play(mode, size)
 # mode = 1  -> game 1 vs 1
 # mode = 2  -> game 1 vs AI
